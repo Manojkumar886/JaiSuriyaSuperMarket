@@ -15,7 +15,7 @@ public class supermarketController
 
 //    http://localhost:8082/create
     @PostMapping("/create")
-    public String creation(@RequestBody supermarketEntity Productdetails)
+     public String creation(@RequestBody supermarketEntity Productdetails)
     {
         return serv.makecreate(Productdetails).getProductName()+" has been added successfullly";
     }
