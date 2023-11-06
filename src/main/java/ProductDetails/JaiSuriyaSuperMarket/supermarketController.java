@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/Supermarket")
+//http://localhost:8082/Supermarket
 public class supermarketController
 {
     @Autowired
@@ -14,12 +16,15 @@ public class supermarketController
 
 
 //    http://localhost:8082/create
+    //after request mapping
+//    //http://localhost:8082/Supermarket/create
     @PostMapping("/create")
      public String creation(@RequestBody supermarketEntity Productdetails)
     {
         return serv.makecreate(Productdetails).getProductName()+" has been added successfullly";
     }
 
+//    http://localhost:8082/Supermarket
     @GetMapping("/")
     public List<supermarketEntity> listall()
     {
