@@ -43,8 +43,7 @@ public class MyAppConfiguration
 
     @Bean
     @Deprecated
-    public SecurityFilterChain  connection(HttpSecurity hp) throws Exception
-    {
+    public SecurityFilterChain  connection(HttpSecurity hp) throws Exception {
 //        hp.authorizeHttpRequests().anyRequest().permitAll(); security not need for my project
 
 //        hp.authorizeHttpRequests().anyRequest().authenticated();//any supermarket req will be need security
@@ -59,9 +58,5 @@ public class MyAppConfiguration
         hp.formLogin();
 
         return hp.build();
-
     }
-
-
-
 }

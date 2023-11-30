@@ -8,6 +8,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/Supermarket")
+@CrossOrigin(origins = "http://localhost:3000")
 //http://localhost:8082/Supermarket
 public class supermarketController
 {
@@ -25,7 +26,7 @@ public class supermarketController
     }
 
 //    http://localhost:8082/Supermarket
-    @GetMapping("/")
+    @GetMapping("/list")
     public List<supermarketEntity> listall()
     {
         return serv.viewall();
