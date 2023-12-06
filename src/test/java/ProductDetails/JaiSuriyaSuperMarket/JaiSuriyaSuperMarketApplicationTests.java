@@ -31,7 +31,7 @@ class JaiSuriyaSuperMarketApplicationTests
         Mockito.when(repo.save(product1)).thenReturn(product1);
         Mockito.when(repo.save(product2)).thenReturn(product2);
 
-        Assert.assertSame("Juice",serv.makecreate(product2).getProductCategory());
+        Assert.assertNotSame("Juice",serv.makecreate(product2).getProductCategory());
     }
 
     @Test

@@ -33,7 +33,7 @@ public class supermarketController
     }
 
 
-    @PutMapping("/update")
+    @PutMapping("/updateone")
     public String updating(@RequestBody supermarketEntity productdetails)
     {
         supermarketEntity temp=serv.makecreate(productdetails);

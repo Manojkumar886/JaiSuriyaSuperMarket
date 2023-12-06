@@ -48,8 +48,7 @@ public class MyAppConfiguration
 
 //        hp.authorizeHttpRequests().anyRequest().authenticated();//any supermarket req will be need security
 
-        hp.authorizeHttpRequests().
-                requestMatchers("/Supermarket/**").authenticated();
+        hp.authorizeRequests().requestMatchers("/Supermarket").authenticated();
         hp.csrf().disable();
 //        csrf-cross site request forgery  -a web attack exploits loopholes
         hp.cors();
